@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" th:href="@{/bootstrap.css}">
+    <link rel="stylesheet" href="/style.css">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    
+  <title>Catalogo</title>
+</head> 
+<body>
+
+  <header th:fragment="header">
+  <div class="contenedor-fluid">
+    <div class="row">
+      <div class="col">
+        <nav class="navbar navbar-expand-md color1 navbar-dark">
+          <a href="#" class="navbar-brand"></a>
+          <img src="img/a.png" >
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Menu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse  justify-content-end" id="Menu">
+            <ul class="navbar-nav">
+               <li class="nav-item"><a th:href="@{/}" class="nav-link">Home</a></li> 
+                  <li class="nav-item"><a th:href="@{/Catalogo}" class="nav-link">Catálogo</a></li> 
+                  <li class="nav-item"><a th:href="@{/Contactanos}" class="nav-link">Contáctanos</a></li> 
+                  <li class="nav-item"><a th:href="@{/Quienes}" class="nav-link">Quienes Somos</a></li> 
+                  <li class="nav-item text-white"><a th:href="@{/Iniciar}" class="nav-link   btn btn-outline-dark">Ingresar</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+    </div>
+
+    <article class="row mt-3 justify-content-around" >
+      <div class="tarjetas col-md-3">
+        <div class="card text-center" style="background:#E9E9E9">
+          <img src="img/img13.PNG"  class="m-2 rounded">
+          <p class="text-danger font-weight-bold">Precio $45.000</p>
+          <div>
+            <p>
+              <a class="btn btn-danger" data-toggle="collapse" href="#tarjeta1" role="button" aria-controls="tarjeta1">Detalles</a>
+              <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#tarjeta1-2" aria-controls="tarjeta1-2">Comprar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+              </svg></button>
+            </p>
+            <div class="row">
+              <div class="col ">
+                <div class="collapse multi-collapse m-2" id="tarjeta1">
+                  <div class="card card-body ">
+                    Camiseta de algodón cuello redondo manga corta, con estampado de la banda Saxon
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="collapse multi-collapse mb-2" id="tarjeta1-2">
+                <div class="card card-body ">
+                  <div class="row ">
+                    <div class="col-md-6">
+                      <p class="font-weight-bold mt-4">Talla:</p>
+                    </div>
+                    <div class="col-md-6 text-start">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">S</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">M</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                        <label class="form-check-label" for="inlineRadio3">L</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                        <label class="form-check-label" for="inlineRadio4">SX</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+                        <label class="form-check-label" for="inlineRadio5">XL</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6">
+                        <label class="form-check-label" for="inlineRadio6">XXL</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col-md-6">
+                      <p class="font-weight-bold mt-4">Color:</p>
+                    </div>
+                    <div class="col-md-6 text-start">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio7" value="option7">
+                        <label class="form-check-label" for="inlineRadio7">Blanco</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio8" value="option8">
+                        <label class="form-check-label" for="inlineRadio8">Negro</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio9" value="option9">
+                        <label class="form-check-label" for="inlineRadio9">Gris</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio10" value="option10">
+                        <label class="form-check-label" for="inlineRadio10">Rojo</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio11" value="option11">
+                        <label class="form-check-label" for="inlineRadio11">Azul</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio12" value="option12">
+                        <label class="form-check-label" for="inlineRadio12">Morado</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pt-2 mb-3">
+                    <label class="font-weight-bold mt-2 mr-3" for="cant">Cantidad:</label>
+                    <input clas="border border-danger" type="number" id="cant" name="cant" min="1" max="100">
+                  </div>
+                  <button type="button" class="btn btn-outline-danger font-weight"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                  </svg>  Terminar</button>   
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card text-center" style=" background:#E9E9E9">
+          <img src="img/img12.PNG"  class="m-2 rounded">
+          <p class="text-danger font-weight-bold">Precio $45.000</p>
+          <div>
+            <p>
+              <a class="btn btn-danger" data-toggle="collapse" href="#tarjeta2" role="button" aria-controls="tarjeta2">Detalles</a>
+              <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#tarjeta2-2" aria-controls="tarjeta2-2">Comprar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+              </svg></button>
+            </p>
+            <div class="row">
+              <div class="col ">
+                <div class="collapse multi-collapse m-2" id="tarjeta2">
+                  <div class="card card-body ">
+                    Camiseta de algodón cuello redondo manga corta, con estampado de la banda Triumph
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="collapse multi-collapse mb-2" id="tarjeta2-2">
+                <div class="card card-body ">
+                  <div class="row ">
+                    <div class="col-md-6">
+                      <p class="font-weight-bold mt-4">Talla:</p>
+                    </div>
+                    <div class="col-md-6 text-start">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">S</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">M</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                        <label class="form-check-label" for="inlineRadio3">L</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                        <label class="form-check-label" for="inlineRadio4">SX</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+                        <label class="form-check-label" for="inlineRadio5">XL</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6">
+                        <label class="form-check-label" for="inlineRadio6">XXL</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col-md-6">
+                      <p class="font-weight-bold mt-4">Color:</p>
+                    </div>
+                    <div class="col-md-6 text-start">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio7" value="option7">
+                        <label class="form-check-label" for="inlineRadio7">Blanco</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio8" value="option8">
+                        <label class="form-check-label" for="inlineRadio8">Negro</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio9" value="option9">
+                        <label class="form-check-label" for="inlineRadio9">Gris</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio10" value="option10">
+                        <label class="form-check-label" for="inlineRadio10">Rojo</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio11" value="option11">
+                        <label class="form-check-label" for="inlineRadio11">Azul</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio12" value="option12">
+                        <label class="form-check-label" for="inlineRadio12">Morado</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label class=" mr-3" for="cant">Cantidad:</label>
+                    <input clas="border border-danger" type="number" id="cant" name="cant" min="1" max="100">
+                  </div>
+                  <button type="button" class="btn btn-outline-danger font-weight"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                  </svg>  Terminar</button>   
+                </div>
+              </div>
+            </div>
+          </div>                        </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card text-center" style="background:#E9E9E9">
+            <img src="img/img11.PNG" class="m-2 rounded">
+
+            <p class="text-danger font-weight-bold">Precio $45.000</p>
+            <div>
+              <p>
+                <a class="btn btn-danger" data-toggle="collapse" href="#tarjeta3" role="button" aria-controls="tarjeta3">Detalles</a>
+                <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#tarjeta3-2" aria-controls="tarjeta3-2">Comprar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                  <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                </svg></button>
+              </p>
+              <div class="row">
+                <div class="col ">
+                  <div class="collapse multi-collapse m-2" id="tarjeta3">
+                    <div class="card card-body ">
+                      Camiseta de algodón cuello redondo manga corta, con estampado de la banda UFO
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="collapse multi-collapse mb-2" id="tarjeta3-2">
+                  <div class="card card-body ">
+
+                    <div class="row ">
+                      <div class="col-md-6">
+                        <p class="font-weight-bold mt-4">Talla:</p>
+                      </div>
+                      <div class="col-md-6 text-start">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">S</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">M</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                          <label class="form-check-label" for="inlineRadio3">L</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                          <label class="form-check-label" for="inlineRadio4">SX</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+                          <label class="form-check-label" for="inlineRadio5">XL</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6">
+                          <label class="form-check-label" for="inlineRadio6">XXL</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-md-6">
+                        <p class="font-weight-bold mt-4">Color:</p>
+                      </div>
+                      <div class="col-md-6 text-start">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio7" value="option7">
+                          <label class="form-check-label" for="inlineRadio7">Blanco</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio8" value="option8">
+                          <label class="form-check-label" for="inlineRadio8">Negro</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio9" value="option9">
+                          <label class="form-check-label" for="inlineRadio9">Gris</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio10" value="option10">
+                          <label class="form-check-label" for="inlineRadio10">Rojo</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio11" value="option11">
+                          <label class="form-check-label" for="inlineRadio11">Azul</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio12" value="option12">
+                          <label class="form-check-label" for="inlineRadio12">Morado</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label class=" mr-3" for="cant">Cantidad:</label>
+                      <input clas="border border-danger" type="number" id="cant" name="cant" min="1" max="100">
+                    </div>
+                    <button type="button" class="btn btn-outline-danger font-weight"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                      <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                    </svg>  Terminar</button>   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-center" style="background:#E9E9E9">
+            <img src="img/img10.PNG" class="m-2 rounded">
+            <p class="text-danger font-weight-bold">Precio $45.000</p>
+            <div>
+              <p>
+                <a class="btn btn-danger" data-toggle="collapse" href="#tarjeta4" role="button" aria-controls="tarjeta4">Detalles</a>
+                <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#tarjeta4-2" aria-controls="tarjeta4-2">Comprar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                  <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                </svg></button>
+              </p>
+              <div class="row">
+                <div class="col ">
+                  <div class="collapse multi-collapse m-2" id="tarjeta4">
+                    <div class="card card-body ">
+                      Camiseta de algodón cuello redondo manga corta, con estampado de "Stay Hungry" es el tercer álbum de la banda de Twisted Sister
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="collapse multi-collapse mb-2" id="tarjeta4-2">
+                  <div class="card card-body ">
+                    <div class="row ">
+                      <div class="col-md-6">
+                        <p class="font-weight-bold mt-4">Talla:</p>
+                      </div>
+                      <div class="col-md-6 text-start">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">S</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">M</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                          <label class="form-check-label" for="inlineRadio3">L</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                          <label class="form-check-label" for="inlineRadio4">SX</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+                          <label class="form-check-label" for="inlineRadio5">XL</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6">
+                          <label class="form-check-label" for="inlineRadio6">XXL</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-md-6">
+                        <p class="font-weight-bold mt-4">Color:</p>
+                      </div>
+                      <div class="col-md-6 text-start">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio7" value="option7">
+                          <label class="form-check-label" for="inlineRadio7">Blanco</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio8" value="option8">
+                          <label class="form-check-label" for="inlineRadio8">Negro</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio9" value="option9">
+                          <label class="form-check-label" for="inlineRadio9">Gris</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio10" value="option10">
+                          <label class="form-check-label" for="inlineRadio10">Rojo</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio11" value="option11">
+                          <label class="form-check-label" for="inlineRadio11">Azul</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio12" value="option12">
+                          <label class="form-check-label" for="inlineRadio12">Morado</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label class=" mr-3" for="cant">Cantidad:</label>
+                      <input clas="border border-danger" type="number" id="cant" name="cant" min="1" max="100">
+                    </div>
+                    <button type="button" class="btn btn-outline-danger font-weight"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                      <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                    </svg>  Terminar</button>   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </article>
+
+      <article class="row mt-3 justify-content-around" >
+        <div class="tarjetas col-md-3">
+          <div class="card text-center" style="background:#E9E9E9">
+            <img src="img/img6.PNG"  class="m-2 rounded">
+            <p class="text-danger font-weight-bold">Precio $45.000</p>
+            <div>
+              <p>
+                <a class="btn btn-danger" data-toggle="collapse" href="#tarjeta5" role="button" aria-controls="tarjeta5">Detalles</a>
+                <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#tarjeta5-2" aria-controls="tarjeta5-2">Comprar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                  <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                </svg></button>
+              </p>
+              <div class="row">
+                <div class="col ">
+                  <div class="collapse multi-collapse m-2" id="tarjeta5">
+                    <div class="card card-body ">
+                      Camiseta de algodón cuello redondo manga corta, con estampado de la película de terror The Exorcist
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="collapse multi-collapse mb-2" id="tarjeta5-2">
+                  <div class="card card-body ">
+                    <div class="row ">
+                      <div class="col-md-6">
+                        <p class="font-weight-bold mt-4">Talla:</p>
+                      </div>
+                      <div class="col-md-6 text-start">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">S</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">M</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                          <label class="form-check-label" for="inlineRadio3">L</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                          <label class="form-check-label" for="inlineRadio4">SX</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+                          <label class="form-check-label" for="inlineRadio5">XL</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6">
+                          <label class="form-check-label" for="inlineRadio6">XXL</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-md-6">
+                        <p class="font-weight-bold mt-4">Color:</p>
+                      </div>
+                      <div class="col-md-6 text-start">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio7" value="option7">
+                          <label class="form-check-label" for="inlineRadio7">Blanco</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio8" value="option8">
+                          <label class="form-check-label" for="inlineRadio8">Negro</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio9" value="option9">
+                          <label class="form-check-label" for="inlineRadio9">Gris</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio10" value="option10">
+                          <label class="form-check-label" for="inlineRadio10">Rojo</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio11" value="option11">
+                          <label class="form-check-label" for="inlineRadio11">Azul</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio12" value="option12">
+                          <label class="form-check-label" for="inlineRadio12">Morado</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label class=" mr-3" for="cant">Cantidad:</label>
+                      <input clas="border border-danger" type="number" id="cant" name="cant" min="1" max="100">
+                    </div>
+                    <button type="button" class="btn btn-outline-danger font-weight"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                      <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                    </svg>  Terminar</button>   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card text-center" style=" background:#E9E9E9">
+            <img src="img/img9.PNG"  class="m-2 rounded">
+
+            <p class="text-danger font-weight-bold">Precio $45.000</p>
+            <div>
+              <p>
+                <a class="btn btn-danger" data-toggle="collapse" href="#tarjeta6" role="button" aria-controls="tarjeta6">Detalles</a>
+                <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#tarjeta6-2" aria-controls="tarjeta6-2">Comprar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                  <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                </svg></button>
+              </p>
+              <div class="row">
+                <div class="col ">
+                  <div class="collapse multi-collapse m-2" id="tarjeta6">
+                    <div class="card card-body ">
+                      Camiseta de algodón cuello redondo manga corta, con estampado de banda Rainbow
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="collapse multi-collapse mb-2" id="tarjeta6-2">
+                  <div class="card card-body ">
+                    <div class="row ">
+                      <div class="col-md-6">
+                        <p class="font-weight-bold mt-4">Talla:</p>
+                      </div>
+                      <div class="col-md-6 text-start">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">S</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">M</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                          <label class="form-check-label" for="inlineRadio3">L</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                          <label class="form-check-label" for="inlineRadio4">SX</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+                          <label class="form-check-label" for="inlineRadio5">XL</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6">
+                          <label class="form-check-label" for="inlineRadio6">XXL</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-md-6">
+                        <p class="font-weight-bold mt-4">Color:</p>
+                      </div>
+                      <div class="col-md-6 text-start">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio7" value="option7">
+                          <label class="form-check-label" for="inlineRadio7">Blanco</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio8" value="option8">
+                          <label class="form-check-label" for="inlineRadio8">Negro</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio9" value="option9">
+                          <label class="form-check-label" for="inlineRadio9">Gris</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio10" value="option10">
+                          <label class="form-check-label" for="inlineRadio10">Rojo</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio11" value="option11">
+                          <label class="form-check-label" for="inlineRadio11">Azul</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio12" value="option12">
+                          <label class="form-check-label" for="inlineRadio12">Morado</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label class=" mr-3" for="cant">Cantidad:</label>
+                      <input clas="border border-danger" type="number" id="cant" name="cant" min="1" max="100">
+                    </div>
+                    <button type="button" class="btn btn-outline-danger font-weight"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                      <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                    </svg>  Terminar</button>   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card text-center" style="background:#E9E9E9">
+            <img src="img/img8.PNG" class="m-2 rounded">
+
+            <p class="text-danger font-weight-bold">Precio $45.000</p>
+            <div>
+              <p>
+                <a class="btn btn-danger" data-toggle="collapse" href="#tarjeta7" role="button" aria-controls="tarjeta7">Detalles</a>
+                <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#tarjeta8-2" aria-controls="tarjeta8-2">Comprar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                  <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                </svg></button>
+              </p>
+              <div class="row">
+                <div class="col ">
+                  <div class="collapse multi-collapse m-2" id="tarjeta7">
+                    <div class="card card-body ">
+                      Camiseta de algodón cuello redondo manga corta, con estampado de la banda Stormwitch
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="collapse multi-collapse mb-2" id="tarjeta7-2">
+                  <div class="card card-body ">
+                    <div class="row ">
+                      <div class="col-md-6">
+                        <p class="font-weight-bold mt-4">Talla:</p>
+                      </div>
+                      <div class="col-md-6 text-start">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">S</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">M</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                          <label class="form-check-label" for="inlineRadio3">L</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                          <label class="form-check-label" for="inlineRadio4">SX</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+                          <label class="form-check-label" for="inlineRadio5">XL</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6">
+                          <label class="form-check-label" for="inlineRadio6">XXL</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-md-6">
+                        <p class="font-weight-bold mt-4">Color:</p>
+                      </div>
+                      <div class="col-md-6 text-start">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio7" value="option7">
+                          <label class="form-check-label" for="inlineRadio7">Blanco</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio8" value="option8">
+                          <label class="form-check-label" for="inlineRadio8">Negro</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio9" value="option9">
+                          <label class="form-check-label" for="inlineRadio9">Gris</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio10" value="option10">
+                          <label class="form-check-label" for="inlineRadio10">Rojo</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio11" value="option11">
+                          <label class="form-check-label" for="inlineRadio11">Azul</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio12" value="option12">
+                          <label class="form-check-label" for="inlineRadio12">Morado</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label class=" mr-3" for="cant">Cantidad:</label>
+                      <input clas="border border-danger" type="number" id="cant" name="cant" min="1" max="100">
+                    </div>
+                    <button type="button" class="btn btn-outline-danger font-weight"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                      <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                    </svg>  Terminar</button>   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-center" style="background:#E9E9E9">
+            <img src="img/img7.PNG" class="m-2 rounded">
+            <p class="text-danger font-weight-bold">Precio $45.000</p>
+            <div>
+              <p>
+                <a class="btn btn-danger" data-toggle="collapse" href="#tarjeta8" role="button" aria-controls="tarjeta8">Detalles</a>
+                <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#tarjeta8-2" aria-controls="tarjeta8-2">Comprar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                  <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                </svg></button>
+              </p>
+              <div class="row">
+                <div class="col ">
+                  <div class="collapse multi-collapse m-2" id="tarjeta8">
+                    <div class="card card-body ">
+                      Camiseta de algodón cuello redondo manga corta, con estampado de la serie The Evil Dead
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="collapse multi-collapse mb-2" id="tarjeta8-2">
+                  <div class="card card-body ">
+                   <div class="row ">
+                    <div class="col-md-6">
+                      <p class="font-weight-bold mt-4">Talla:</p>
+                    </div>
+                    <div class="col-md-6 text-start">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">S</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">M</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                        <label class="form-check-label" for="inlineRadio3">L</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                        <label class="form-check-label" for="inlineRadio4">SX</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+                        <label class="form-check-label" for="inlineRadio5">XL</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6">
+                        <label class="form-check-label" for="inlineRadio6">XXL</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col-md-6">
+                      <p class="font-weight-bold mt-4">Color:</p>
+                    </div>
+                    <div class="col-md-6 text-start">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio7" value="option7">
+                        <label class="form-check-label" for="inlineRadio7">Blanco</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio8" value="option8">
+                        <label class="form-check-label" for="inlineRadio8">Negro</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio9" value="option9">
+                        <label class="form-check-label" for="inlineRadio9">Gris</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio10" value="option10">
+                        <label class="form-check-label" for="inlineRadio10">Rojo</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio11" value="option11">
+                        <label class="form-check-label" for="inlineRadio11">Azul</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio12" value="option12">
+                        <label class="form-check-label" for="inlineRadio12">Morado</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label class=" mr-3" for="cant">Cantidad:</label>
+                    <input clas="border border-danger" type="number" id="cant" name="cant" min="1" max="100">
+                  </div>
+                  <button type="button" class="btn btn-outline-danger font-weight"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                  </svg>  Terminar</button>   
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </article>
+      <article class="row mt-3 justify-content-around" >
+        <div class="tarjetas col-md-3">
+          <div class="card text-center" style="background:#E9E9E9">
+            <img src="img/img5.PNG"  class="m-2 rounded">
+            <p class="text-danger font-weight-bold">Precio $45.000</p>
+            <div>
+              <p>
+                <a class="btn btn-danger" data-toggle="collapse" href="#tarjeta9" role="button" aria-controls="tarjeta9">Detalles</a>
+                <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#tarjeta9-2" aria-controls="tarjeta9-2">Comprar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                  <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                </svg></button>
+              </p>
+              <div class="row">
+                <div class="col ">
+                  <div class="collapse multi-collapse m-2" id="tarjeta9">
+                    <div class="card card-body ">
+                      Camiseta de algodón cuello redondo manga corta, con estampado de la novela de terror The shining a stephen king
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="collapse multi-collapse mb-2" id="tarjeta9-2">
+                  <div class="card card-body ">
+                    <div class="row ">
+                      <div class="col-md-6">
+                        <p class="font-weight-bold mt-4">Talla:</p>
+                      </div>
+                      <div class="col-md-6 text-start">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">S</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">M</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                          <label class="form-check-label" for="inlineRadio3">L</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                          <label class="form-check-label" for="inlineRadio4">SX</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+                          <label class="form-check-label" for="inlineRadio5">XL</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6">
+                          <label class="form-check-label" for="inlineRadio6">XXL</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-md-6">
+                        <p class="font-weight-bold mt-4">Color:</p>
+                      </div>
+                      <div class="col-md-6 text-start">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio7" value="option7">
+                          <label class="form-check-label" for="inlineRadio7">Blanco</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio8" value="option8">
+                          <label class="form-check-label" for="inlineRadio8">Negro</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio9" value="option9">
+                          <label class="form-check-label" for="inlineRadio9">Gris</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio10" value="option10">
+                          <label class="form-check-label" for="inlineRadio10">Rojo</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio11" value="option11">
+                          <label class="form-check-label" for="inlineRadio11">Azul</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio12" value="option12">
+                          <label class="form-check-label" for="inlineRadio12">Morado</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label class=" mr-3" for="cant">Cantidad:</label>
+                      <input clas="border border-danger" type="number" id="cant" name="cant" min="1" max="100">
+                    </div>
+                    <button type="button" class="btn btn-outline-danger font-weight"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                      <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                    </svg>  Terminar</button>   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card text-center" style=" background:#E9E9E9">
+            <img src="img/img4.PNG"  class="m-2 rounded">
+
+            <p class="text-danger font-weight-bold">Precio $45.000</p>
+            <div>
+              <p>
+                <a class="btn btn-danger" data-toggle="collapse" href="#tarjeta10" role="button" aria-controls="tarjeta10">Detalles</a>
+                <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#tarjeta10-2" aria-controls="tarjeta10-2">Comprar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                  <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                </svg></button>
+              </p>
+              <div class="row">
+                <div class="col ">
+                  <div class="collapse multi-collapse m-2" id="tarjeta10">
+                    <div class="card card-body ">
+                      Camiseta de algodón cuello redondo manga corta, con estampado de la película muda Nosferatu
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="collapse multi-collapse mb-2" id="tarjeta10-2">
+                  <div class="card card-body ">
+
+                   <div class="row ">
+                    <div class="col-md-6">
+                      <p class="font-weight-bold mt-4">Talla:</p>
+                    </div>
+                    <div class="col-md-6 text-start">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">S</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">M</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                        <label class="form-check-label" for="inlineRadio3">L</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                        <label class="form-check-label" for="inlineRadio4">SX</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+                        <label class="form-check-label" for="inlineRadio5">XL</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6">
+                        <label class="form-check-label" for="inlineRadio6">XXL</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col-md-6">
+                      <p class="font-weight-bold mt-4">Color:</p>
+                    </div>
+                    <div class="col-md-6 text-start">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio7" value="option7">
+                        <label class="form-check-label" for="inlineRadio7">Blanco</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio8" value="option8">
+                        <label class="form-check-label" for="inlineRadio8">Negro</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio9" value="option9">
+                        <label class="form-check-label" for="inlineRadio9">Gris</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio10" value="option10">
+                        <label class="form-check-label" for="inlineRadio10">Rojo</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio11" value="option11">
+                        <label class="form-check-label" for="inlineRadio11">Azul</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio12" value="option12">
+                        <label class="form-check-label" for="inlineRadio12">Morado</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label class=" mr-3" for="cant">Cantidad:</label>
+                    <input clas="border border-danger" type="number" id="cant" name="cant" min="1" max="100">
+                  </div>
+                  <button type="button" class="btn btn-outline-danger font-weight"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                  </svg>  Terminar</button>   
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card text-center" style="background:#E9E9E9">
+          <img src="img/img3.PNG" class="m-2 rounded">
+
+          <p class="text-danger font-weight-bold">Precio $92.000</p>
+          <div>
+            <p>
+              <a class="btn btn-danger" data-toggle="collapse" href="#tarjeta11" role="button" aria-controls="tarjeta11">Detalles</a>
+              <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#tarjeta11-2" aria-controls="tarjeta11-2">Comprar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+              </svg></button>
+            </p>
+            <div class="row">
+              <div class="col ">
+                <div class="collapse multi-collapse m-2" id="tarjeta11">
+                  <div class="card card-body ">
+                    Camiseta de algodón cuello redondo manga corta, con estampado de la novela de terror The shining a stephen king más gorra destampada de The Evil Dead
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="collapse multi-collapse mb-2" id="tarjeta11-2">
+                <div class="card card-body ">
+                  <div class="row ">
+                    <div class="col-md-6">
+                      <p class="font-weight-bold mt-4">Talla:</p>
+                    </div>
+                    <div class="col-md-6 text-start">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">S</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">M</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                        <label class="form-check-label" for="inlineRadio3">L</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                        <label class="form-check-label" for="inlineRadio4">SX</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+                        <label class="form-check-label" for="inlineRadio5">XL</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6">
+                        <label class="form-check-label" for="inlineRadio6">XXL</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col-md-6">
+                      <p class="font-weight-bold mt-4">Color:</p>
+                    </div>
+                    <div class="col-md-6 text-start">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio7" value="option7">
+                        <label class="form-check-label" for="inlineRadio7">Blanco</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio8" value="option8">
+                        <label class="form-check-label" for="inlineRadio8">Negro</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio9" value="option9">
+                        <label class="form-check-label" for="inlineRadio9">Gris</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio10" value="option10">
+                        <label class="form-check-label" for="inlineRadio10">Rojo</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio11" value="option11">
+                        <label class="form-check-label" for="inlineRadio11">Azul</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio12" value="option12">
+                        <label class="form-check-label" for="inlineRadio12">Morado</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label class=" mr-3" for="cant">Cantidad:</label>
+                    <input clas="border border-danger" type="number" id="cant" name="cant" min="1" max="100">
+                  </div>
+                  <button type="button" class="btn btn-outline-danger font-weight"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                  </svg>  Terminar</button>   
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card text-center" style="background:#E9E9E9">
+          <img src="img/img2.PNG" class="m-2 rounded">
+          <p class="text-danger font-weight-bold">Precio $45.000</p>
+          <div>
+            <p>
+              <a class="btn btn-danger" data-toggle="collapse" href="#tarjeta12" role="button" aria-controls="tarjeta12">Detalles</a>
+              <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#tarjeta12-2" aria-controls="tarjeta12-2">Comprar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+              </svg></button>
+            </p>
+            <div class="row">
+              <div class="col ">
+                <div class="collapse multi-collapse m-2" id="tarjeta12">
+                  <div class="card card-body ">
+                    Camiseta de algodón cuello redondo manga corta, con estampado del famoso cantante Michael Jackson
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="collapse multi-collapse mb-2" id="tarjeta12-2">
+                <div class="card card-body ">
+                  <div class="row ">
+                    <div class="col-md-6">
+                      <p class="font-weight-bold mt-4">Talla:</p>
+                    </div>
+                    <div class="col-md-6 text-start">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">S</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">M</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                        <label class="form-check-label" for="inlineRadio3">L</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                        <label class="form-check-label" for="inlineRadio4">SX</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+                        <label class="form-check-label" for="inlineRadio5">XL</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6">
+                        <label class="form-check-label" for="inlineRadio6">XXL</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col-md-6">
+                      <p class="font-weight-bold mt-4">Color:</p>
+                    </div>
+                    <div class="col-md-6 text-start">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio7" value="option7">
+                        <label class="form-check-label" for="inlineRadio7">Blanco</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio8" value="option8">
+                        <label class="form-check-label" for="inlineRadio8">Negro</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio9" value="option9">
+                        <label class="form-check-label" for="inlineRadio9">Gris</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio10" value="option10">
+                        <label class="form-check-label" for="inlineRadio10">Rojo</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio11" value="option11">
+                        <label class="form-check-label" for="inlineRadio11">Azul</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio12" value="option12">
+                        <label class="form-check-label" for="inlineRadio12">Morado</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label class=" mr-3" for="cant">Cantidad:</label>
+                    <input clas="border border-danger" type="number" id="cant" name="cant" min="1" max="100">
+                  </div>
+                  <button type="button" class="btn btn-outline-danger font-weight"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                  </svg>  Terminar</button>   
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </article>
+        <article class="row mt-3 justify-content-around" >
+          <div class="tarjetas col-md-3">
+            <div class="card text-center" style="background:#E9E9E9">
+              <img src="img/img1.PNG"  class="m-2 rounded">
+              <p class="text-danger font-weight-bold">Precio $80.000</p>
+              <div>
+                <p>
+                  <a class="btn btn-danger" data-toggle="collapse" href="#tarjeta9" role="button" aria-controls="tarjeta9">Detalles</a>
+                  <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#tarjeta9-2" aria-controls="tarjeta9-2">Comprar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                  </svg></button>
+                </p>
+                <div class="row">
+                  <div class="col ">
+                    <div class="collapse multi-collapse m-2" id="tarjeta9">
+                      <div class="card card-body ">
+                        Buso con capota de algodón , con estampado de la novela del escritor estadounidense Stephen King
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="collapse multi-collapse mb-2" id="tarjeta9-2">
+                    <div class="card card-body ">
+                      <div class="row ">
+                        <div class="col-md-6">
+                          <p class="font-weight-bold mt-4">Talla:</p>
+                        </div>
+                        <div class="col-md-6 text-start">
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">S</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2">M</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                            <label class="form-check-label" for="inlineRadio3">L</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                            <label class="form-check-label" for="inlineRadio4">SX</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+                            <label class="form-check-label" for="inlineRadio5">XL</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6">
+                            <label class="form-check-label" for="inlineRadio6">XXL</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mt-3">
+                        <div class="col-md-6">
+                          <p class="font-weight-bold mt-4">Color:</p>
+                        </div>
+                        <div class="col-md-6 text-start">
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio7" value="option7">
+                            <label class="form-check-label" for="inlineRadio7">Blanco</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio8" value="option8">
+                            <label class="form-check-label" for="inlineRadio8">Negro</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio9" value="option9">
+                            <label class="form-check-label" for="inlineRadio9">Gris</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio10" value="option10">
+                            <label class="form-check-label" for="inlineRadio10">Rojo</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio11" value="option11">
+                            <label class="form-check-label" for="inlineRadio11">Azul</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio12" value="option12">
+                            <label class="form-check-label" for="inlineRadio12">Morado</label>
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label class=" mr-3" for="cant">Cantidad:</label>
+                          <input clas="border border-danger" type="number" id="cant" name="cant" min="1" max="100">
+                        </div>
+                        <button type="button" class="btn btn-outline-danger font-weight"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                          <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                        </svg>  Terminar</button>   
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class=" p row justify-content-around mt-5">
+          <div class="col">
+            <p class="jumbotron color1 text-white-50">Documentation and examples for Bootstrap’s powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!--SCRIP-->
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="css/bootstrap.bundle.min.js"></script>
+
+
+    </header>
+  </body>
+  </html>

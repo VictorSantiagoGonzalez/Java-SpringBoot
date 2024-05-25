@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<htmln xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" th:href="@{/bootstrap.css}">
+        <link rel="stylesheet" th:href="@{/estilosL.css}">
+        <link rel="shortcut icon" href="img/1234.png">
+
+        <title>Login</title>
+
+    </head>
+    <body>
+    <body id="login" >
+        <form class="box"  onsubmit="return validarUsuario()">
+
+            <h1>Inicio Sesión</h1>
+             <input type="email" class="form-control" id="email" placeholder="Correo electrónico">
+            <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña">
+            <input type="submit"   id="btnAlerta" value="INGRESAR">
+            <a id="olv"href="./Registrar">Crear Cuenta</a>
+            </br>
+            <a id="olv"href="./recuperar">¿Olvido la contraseña?</a>
+
+        </form>
+
+    </body>
+
+
+
+
+
+
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="css/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    
+<script type="text/javascript">
+
+        function validarUsuario() {
+            var email = document.getElementById("email").value;
+            var clave = document.getElementById("password").value;
+
+            //El rol admin ingresa al dashboard con las funcionalidades de su rol
+
+            if (email === "wendy@gmail.com" && clave === "1234567") {
+                 window.location.href = "/Admin";
+                return false;
+            } 
+
+             //El rol otro usuario ingresa al dashboard con las funcionalidades de su rol
+            if (email === "santiago@gmail.com" && clave === "7654321") {
+                
+                window.location.href = "/Usuario";
+                return false;
+            } 
+            else {
+                swal({
+                    title: "Incorrecto!!",
+                    text: "Los datos ingresados son incorrectos, verifique e intente nuevamente",
+                    icon: "error",
+                });
+                return false;
+            }
+        }
+</script>
+
+
+</body>
+
+
+
+</htmln>

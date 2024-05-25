@@ -1,0 +1,249 @@
+<!doctype html>
+
+<htmln xmlns:th="http://www.thymeleaf.org"></htmln>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="/bootstrap.css">
+    <link th:href="@{/style.css}" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+
+    <title>Hello, world!</title>
+</head>
+<body>
+
+
+
+    <header th:fragment="header">
+        <div class="contenedor-fluid">
+            <div class="row">
+                <div class="col">
+                    <nav class="navbar navbar-expand-md color1 navbar-dark">
+                        <a href="#" class="navbar-brand"></a>
+                        <img src="/img/a.png"  >
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Menu">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse  justify-content-end" id="Menu">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a th:href="@{/}" class="nav-link">Home</a></li> 
+                                <li class="nav-item"><a th:href="@{/Catalogo}" class="nav-link">Catálogo</a></li> 
+                                <li class="nav-item"><a th:href="@{/Contactanos}" class="nav-link">Contáctanos</a></li> 
+                                <li class="nav-item"><a th:href="@{/Quienes}" class="nav-link">Quienes Somos</a></li> 
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <div class=" text-dark mt-5 text-center "><h1> Registrar Pedido</h1></div>
+
+
+            <div class="container mt-5">
+                <div class="row justify-content-around"> 
+                    <div class="col-9 border border-danger rounded bg-light text-center mb-5">
+
+                        <form class="m-2 mb-5" th:action="@{/guardar}" method="POST" th:object="${tbl_pedidos_pro}">
+                            <input type="hidden"  name="idtbl_pedidos_pro" th:field="*{idtbl_pedidos_pro}"/>
+
+
+
+                            <div class="form-group row pt-3">
+                                <label for="inputPassword" class="col-3 col-form-label">Tipo de Tela</label>
+                                <div class="col-sm-9">
+                                    <select class="form-control" required th:field="*{Tipo_de_tela}">
+
+                                        <option value="POLIESTER"> POLIESTER</option>
+                                        <option value="ALGODON"> ALGODON</option>
+                                        <option value="MOHAIR"> MOHAIR</option>
+                                        <option value="LINO"> LINO</option>
+                                        <option value="LANA"> LANA</option>
+                                        <option value="SEDA"> SEDA</option>
+
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="inputPassword" class="col-3 col-form-label">Color de Tela</label>
+                                <div class="col-sm-9">
+                                    <select class="form-control" required th:field="*{Color}">
+
+                                        <option value="MORADO"> AMARILLO</option>
+                                        <option value="MORADO"> MORADO</option>
+                                        <option value="BLANCO"> BLANCO</option>
+                                        <option value="VERDE"> VERDE </option>
+                                        <option value="NEGRO"> NEGRO</option>
+                                        <option value="CAFE"> CAFE</option>
+                                        <option value="AZUL"> AZUL</option>
+                                        <option value="ROJO"> ROJO</option>
+
+                                    </select>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="staticEmail" class="col-3 col-form-label">Cantidad</label>
+                                <div class="col-sm-9">
+                                    <input  type="number" class="form-control" id="cant" name="cant" min="1" max="500" required th:field="*{Cantidad}">
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group row">
+                                <label for="staticEmail" class="col-3 col-form-label">Largo</label>
+                                <div class="col-sm-9">
+                                    <input  type="text" class="form-control" id="lar" name="lar" min="1" max="500"  placeholder="7 MT / 400 CT" required th:field="*{Largo}">
+                                </div>
+                                <div class="col-sm-3">
+
+
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="staticEmail" class="col-3 col-form-label">Ancho</label>
+                                <div class="col-sm-9">
+                                    <input  type="text" class="form-control" id="Anc" name="Anc" min="1" max="500"  placeholder="7 MT / 400 CT" required th:field="*{Ancho}">
+                                </div>
+                                <div class="col-sm-3">
+
+                                </div>
+
+                            </div>
+
+                            <div th:if="${tbl_pedidos_pro.tbl_proveedor}">    
+                                <div class="form-group row" th:object="${tbl_pedidos_pro.tbl_proveedor}">
+                                     <label for="inputPassword" class="col-3 col-form-label">Proveedor</label>
+                                     <div class="col-sm-9">
+                                    <select class="form-select" id="Tbl_proveedor" name="Tbl_proveedor">
+                                        <option th:value="${tbl_pedidos_pro.tbl_proveedor.idtbl_proveedor}"
+                                                th:text="${tbl_pedidos_pro.tbl_proveedor.idtbl_proveedor}+' : ' +${tbl_pedidos_pro.tbl_proveedor.Nombre}" selected=""></option>
+                                        <option th:each="tbl_proveedorItem : ${lstTbl_proveedor}"
+                                                th:value="${tbl_proveedorItem.idtbl_proveedor}"
+                                                th:text="${tbl_proveedorItem.idtbl_proveedor}+' : ' +${tbl_proveedorItem.Nombre}"></option>
+                                    </select>
+                                </div>   
+                            </div>
+                          </div>
+                            
+                            
+                            
+                           
+                            
+                            
+                            
+                           <div th:unless="${tbl_pedidos_pro.tbl_proveedor}">  
+                               <div class="form-group row" th:object="${tbl_pedidos_pro.tbl_proveedor}">
+                                 <label for="inputPassword" class="col-3 col-form-label">Proveedor</label>
+                                <div class="col-sm-9">
+                                    <select class="form-select" id="Tbl_proveedor" name="Tbl_proveedor">
+
+                                       <option value="">Seleccionar Distribuidor</option>
+                                        <option th:each="tbl_proveedorItem : ${lstTbl_proveedor}"
+                                                th:value="${tbl_proveedorItem.idtbl_proveedor}"
+                                                th:text="${tbl_proveedorItem.idtbl_proveedor}+' : ' +${tbl_proveedorItem.Nombre}"></option>
+                                    </select>
+                                </div>
+                            </div>
+                               </div>
+                            
+                             <div th:unless="${tbl_pedidos_pro.tbl_proveedor}">  
+                               <div class="form-group row" th:object="${tbl_pedidos_pro.tbl_proveedor}">
+                                 <label for="inputPassword" class="col-3 col-form-label">Correo</label>
+                                <div class="col-sm-9">
+                                    <select class="form-select" id="Tbl_proveedor" name="Tbl_proveedor">
+
+                                       <option value="">Seleccionar Correo</option>
+                                        <option th:each="tbl_proveedorItem : ${lstTbl_proveedor}"
+                                                th:value="${tbl_proveedorItem.idtbl_proveedor}"
+                                                th:text="${tbl_proveedorItem.idtbl_proveedor}+' : ' +${tbl_proveedorItem.Correo}"></option>
+                                    </select>
+                                </div>
+                            </div>
+                               </div>
+                            
+                            <div th:unless="${tbl_pedidos_pro.tbl_proveedor}">  
+                               <div class="form-group row" th:object="${tbl_pedidos_pro.tbl_proveedor}">
+                                 <label for="inputPassword" class="col-3 col-form-label">Correo 2</label>
+                                <div class="col-sm-9">
+                                    <select class="form-select" id="Tbl_proveedor" name="Tbl_proveedor">
+
+                                       <option value="">Seleccionar Correo</option>
+                                        <option th:each="tbl_proveedorItem : ${lstTbl_proveedor}"
+                                                th:value="${tbl_proveedorItem.idtbl_proveedor}"
+                                                th:text="${tbl_proveedorItem.idtbl_proveedor}+' : ' +${tbl_proveedorItem.Correo}"></option>
+                                    </select>
+                                </div>
+                            </div>
+                               </div>
+                            
+                            
+
+
+                            <div class="form-group row">
+                                <label for="inputPassword" class="col-3 col-form-label">Fecha del pedido</label>
+                                <div class="col-md-9">
+                                    <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required th:field="*{Fecha_del_pedido}">
+                                </div>
+                            </div>
+
+
+
+                            <div class="text-center mb-3 pt-3">
+                                <input class="btn btn-danger" type="submit" value="Enviar pedido">
+                            </div>
+                        </form>
+                    </div>  
+                </div>
+            </div>
+
+
+            <div class="row justify-content-around pt-4 color1 text-white-50 ">
+                <div class="col-3 ">
+                    <h4>Sobre Westars</h4>
+                    <p>Trabaja con Nosotros</p>
+                    <p>Nuestras Tiendas</p>
+                    <p>Promociones</p>
+                </div>
+                <div class="col-3 color-white"> 
+                    <h4>Políticas</h4>
+                    <p>Términos y Condiciones</p>
+                    <p>Cambios y Devoluciones</p>
+                    <p>Tratamiento de Datos</p>
+                    <p>Garantía</p>
+                    <p>Envíos</p>
+                    <p>TyC Día sin IVA</p>
+                </div>
+                <div class="col-3">
+                    <h4>Atención al Cliente</h4>
+                    <p>Formulario de Retracto</p>
+                    <p>Formulario de PQR</p>
+                    <p>Preguntas Frecuentes</p>
+                    <p>Contáctanos</p>
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+</body>

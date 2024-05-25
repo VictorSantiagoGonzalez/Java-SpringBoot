@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" th:href="@{/bootstrap.css}">
+        <link th:href="@{/style.css}" rel="stylesheet" />
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+        <title>Quienes Somos</title>
+    </head> 
+    <body>
+        <header th:fragment="header">
+            <div class="contenedor-fluid">
+                <div class="row">
+                    <div class="col-md">
+                        <nav class="navbar navbar-expand-md color1 navbar-dark">
+                            <a href="#" class="navbar-brand"></a>
+                            <img src="img/a.png">
+
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Menu">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse  justify-content-end" id="Menu">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item"><a th:href="@{/}" class="nav-link">Home</a></li> 
+                                    <li class="nav-item"><a th:href="@{/Catalogo}" class="nav-link">Catálogo</a></li> 
+                                    <li class="nav-item"><a th:href="@{/Contactanos}" class="nav-link">Contáctanos</a></li> 
+                                    <li class="nav-item"><a th:href="@{/Quienes}" class="nav-link">Quienes Somos</a></li> 
+                                    <li class="nav-item text-white"><a th:href="@{/Iniciar}" class="nav-link   btn btn-outline-dark">Ingresar</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div>
+                    <h1 class="text-center mb-5 mt-5 mb-3 fw-bolder">
+                        Quienes Somos
+                    </h1>
+                </div>
+                <div class="row justify-content-around m-3">
+                    <div class="col-md-7 border border-danger rounded  ml-3">
+                        <p class="m-2">
+                            Es una empresa que participa activamente en la Industria del estampado de diferentes articulos como; camisas, gorras y busos desde hace mas de 5 años. Su trayectoria y crecimiento esta íntimamente ligado al desarrollo de la distribución a microempresas, requeridas por el sector público y privado
+                        </p>
+                        <p class="m-3" >
+                        <h5 class=" m-3 fw-bold">Visión:</h5>Westars tiene como misión prestar servicios de estampados con diseños de nusestros clientes o de nuestra empresa en articulos de uso personal a clientes teniendo en cuenta todo tipo de edad,estamos comprometidos en satisfacer y superar las expectativas de nuestros clientes, apostamos por el mejor de los recursos, nuestro talento humano; brindamos calidad y seguridad en nuestros procesos, y el equilibro perfecto entreexperiencia e innovación.
+                        </p>
+                        <p class="">
+                        <h5 class=" m-3 fw-bold">Misión:</h5>Ser organización líder en el área de mercado en vestidura, reconocida por la calidad de sus servicios, sus innovadoras estrategias y la seguridad de sus procesos, siendo capaz de evolucionar con las condiciones del mercado y de adaptarserápidamente a los cambios del entorno 
+                        </p>
+                    </div>
+                    <div class="col-md-4 ">
+                        <img class="rounded" style="width:440px; height:440px;" src="img/camisas.jpg">
+                    </div>
+                </div>
+                <div class=" p row justify-content-around mt-5">
+                    <div class="col-md">
+                        <p class="jumbotron color1 text-white-50 ">Documentation and examples for Bootstrap’s powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--SCRIP-->
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="css/bootstrap.bundle.min.js"></script>
+</body>
+</html>

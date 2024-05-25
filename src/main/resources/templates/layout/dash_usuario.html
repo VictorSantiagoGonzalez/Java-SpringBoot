@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link th:href="@{/style.css}" rel="stylesheet" />
+       <link rel="stylesheet" th:href="@{/bootstrap.css}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+
+    <title>::Dashboard Usuario::</title>
+    <title>Document</title>
+</head>
+<body>
+    <header th:fragment="header">
+  <div class="contenedor-fluid">
+   <div class="row">
+     <div class="col">
+        <nav class="navbar navbar-expand-md  color1 navbar-dark">
+            <a href="#" class="navbar-brand">
+                <img src="..\img\a.png" alt="" class="ml-3">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="Menu">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item"><a th:href="@{/}" class="btn btn-dark btn-block">Cerrar Sesión</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>   <!-- Fin fila que contiene la barra de navegacion superior -->
+<!-- Segunda fila barra lateral - contenido central -->
+<div class="row">
+    <!-- 1 columna barra de navegacion -->
+    <div class="col-md-3" >
+        <nav id="Menu" class="d-md-block collapse navbar-light pl-3" style="background-color:#E7E7E7">
+            <div class="navTitulo" ><h1>Westars</h1></div>
+            <ul class="navbar-nav">
+                 
+                <li class="nav-item"><a th:href="@{/}"  class="nav-link"><i class="fas fa-user-plus"></i>Home de Westars</a></li>
+                <li class="nav-item"><a th:href="@{/Contactanos}" class="nav-link"><i class="fas fa-user-edit"></i>Catálogo</a></li>
+                <li class="nav-item"><a th:href="@{/Contactanos}" class="nav-link"><i class="fas fa-user-edit"></i>Contactanos</a></li>
+                <li class="nav-item"><a th:href="@{/Quienes}" class="nav-link"><i class="fas fa-user-edit"></i>Quienes Somos</a></li>
+            </ul>
+            <div class="navTitulo"><h1>Pedidos</h1></div>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-user-plus"></i>Historial de Pedido</a></li>
+                <li class="nav-item"><a href="..\Crear\Crear.html" class="nav-link"><i class="fas fa-user-edit"></i>Registar Pedido</a></li>
+            </ul>
+            <div class="navTitulo"> <h1>Productos</h1></div>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-user-plus"></i>Mis Productos Favoritos</a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-user-edit"></i>Productos más Vendidos </a></li>
+            </ul>
+            <div class="navTitulo"><h1>Diseño</h1></div>
+            <ul class="navbar-nav pt-1">
+                <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-user-plus"></i>Mis Diseños</a></li>	
+            </ul>
+        </nav>
+
+    </div>
+    <!-- 2 columna contenido central -->
+    <div class="col-md-9">
+        <div class="row pt-4">
+            <div class="col-md-4">
+                <div class="card " style="background-color:#8E0909">
+                    <img class="m-2 rounded" src="..\img\usuario.png" style="width: 300px; height: 400px;">
+                    <div class="card-body">
+                        <h5 class="text-white-50">Ivan Santiago Mejia Velazco</h5>
+                        <p class="card-text text-white-50">Cliente</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="font-weight-bold ml-3">Nombres:</p>
+                        <div class="border border-dark rounded" >
+                        <p class="ml-3">Ivan Santiago</p>
+                        </div>
+                        <p class="font-weight-bold mt-3 ml-3">Documento:</p>
+                        <div class="border border-dark rounded" >
+                        <p class="ml-3">456776587</p>
+                        </div>
+                        <p class="font-weight-bold mt-3 ml-3">Ciudad:</p>
+                        <div class="border border-dark rounded" >
+                        <p class="ml-3">Bogotá</p>
+                        </div>
+                        <p class="font-weight-bold mt-3 ml-3">Correo:</p>
+                        <div class="border border-dark rounded" >
+                        <p class="ml-3">santiago@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <p class="font-weight-bold ml-3">Apellidos:</p>
+                        <div class="border border-dark rounded" >
+                        <p class="ml-3">Mejia Velazco</p>
+                        </div>
+                        <p class="font-weight-bold mt-3 ml-3">Teléfono:</p>
+                        <div class="border border-dark rounded" >
+                        <p class="ml-3">3128909987</p>
+                        </div>
+                        <p class="font-weight-bold mt-3 ml-3">Dirrección:</p>
+                        <div class="border border-dark rounded" >
+                        <p class="ml-3">Calle </p>
+                        </div>
+                        <p class="font-weight-bold mt-3 ml-3">Contraseña:</p>
+                        <div class="border border-dark rounded" >
+                        <p class="ml-3">7654321</p>
+                        </div>
+                        <button type="button" style="background: #8E0909" class="btn btn-danger text-whitw mt-5">Actualizar Datos</button>
+                    </div>
+                </div>
+            </div>  
+        </div>    
+</div>
+        <div class=" p row justify-content-around ">
+            <div class="col-md">
+                <p class="jumbotron color1 text-white-50 ">Documentation and examples for Bootstrap’s powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.</p>
+            </div>
+        </div>
+</div>
+
+
+<!-- Script -->
+
+
+<script src="../js/jquery-3.5.1.slim.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../css/bootstrap.bundle.min.js"></script>
+</header>
+</body>
+</html>

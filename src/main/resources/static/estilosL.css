@@ -1,0 +1,130 @@
+/*LOGIN*/
+
+#login{
+    margin: 0;
+    padding: 0;
+    background: url("../img/Fondo.jpg") no-repeat center top ;
+    background-size:cover ;
+    font-family: sans-serif;
+}
+
+.box{
+    width: 411px;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 400px;
+    transform: translate(-50%, -50%);
+    background: rgba(40,57,101,.9);
+    text-align: center;
+}
+
+.box  h1{
+    color:#ffffff;
+    text-transform: uppercase;
+    font-weight: 200;
+
+}
+.box input[type="email"],.box input[type="password"] {
+    border: none;
+    background: transparent;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 1px solid #d8dbe0;
+    padding: 14px 10px;
+    width: 220px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25px;
+}
+
+.box input[type="email"]:focus,.box input[type="password"]:focus{
+    width: 270px;
+    border-color: white;
+}
+.box input[type="submit"]{
+    border: none;
+    background: #4a6f97;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 1px solid #d8dbe0;
+    padding: 14px 10px;
+    width: 220px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25px;
+    cursor: pointer;
+}
+
+#login{
+    margin: 0;
+    padding: 0;
+    background: url("../img/Fondo.jpg") no-repeat center top ;
+    background-size:cover ;
+    font-family: sans-serif;
+}
+.title_recuCotr{
+    color: white;
+}
+.formulario3{
+    width: 411px;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 400px;
+    transform: translate(-50%, -50%);
+    background: rgba(40,57,101,.9);
+    text-align: center;
+}
+
+.formulario3  h1{
+    color:#ffffff;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+.formulario3 input[type="email"],.formulario3 input[type="password"] {
+    border: none;
+    background: transparent;
+    display: block;
+    margin: 0px auto;
+    text-align: center;
+    border: 1px solid #d8dbe0;
+    padding: 14px 10px;
+    width: 220px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25px;
+}
+
+.formulario3 input[type="email"]:focus,.formulario3 input[type="password"]:focus{
+    width: 270px;
+    border-color: white;
+}
+.formulario3 input[type="button"]{
+    border: none;
+    background: #4a6f97;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 1px solid #d8dbe0;
+    padding: 14px 10px;
+    width: 220px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25px;
+    cursor: pointer;
+}
+
+
+#olv{
+    color:white;
+
+}

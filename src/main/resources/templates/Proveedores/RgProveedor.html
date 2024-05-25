@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<htmln xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" th:href="@{/bootstrap.css}">
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Registrar Proveedor</title>
+</head> 
+<body>
+
+    <div class="contenedor-fluid">
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-expand-md  color1 navbar-dark">
+                    <a href="#" class="navbar-brand">
+                        <img src="../img/a.png" class="ml-3">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Menu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse  justify-content-end" id="Menu">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a th:href="@{/}" class="nav-link">Home</a></li> 
+                            <li class="nav-item"><a th:href="@{/Catalogo}" class="nav-link">Catálogo</a></li> 
+                            <li class="nav-item"><a th:href="@{/Contactanos}" class="nav-link">Contáctanos</a></li> 
+                            <li class="nav-item"><a th:href="@{/Quienes}" class="nav-link">Quienes Somos</a></li> 
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+        </div>
+
+        <div class=" text-dark mt-5 text-center "><h1> Registrar Proveedor </h1></div>
+        <div class="container mt-5 ">
+            <div class="row justify-content-around"> 
+                <div class="col-9 border  border-danger rounded bg-light text-center mb-5">
+                    <form class="m-2 mb-5" th:action="@{/guardarPro}" method="POST" th:object="${tbl_proveedor}">
+                        <input type="hidden" name="idtbl_proveedor" th:field="*{idtbl_proveedor}"/>
+
+
+
+                        <div class="form-group row pt-3">
+                            <label for="inputPassword" class="col-3 col-form-label">Nombres</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" placeholder="Empresa - Persona" required th:field="*{Nombre}">
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="form-group row ">
+                            <label for="staticEmail" class="col-3 col-form-label">Correo Electrónico</label>
+                            <div class="col-sm-9">
+                                <input type="email" class="form-control" placeholder="email@example.com" required th:field="*{Correo}">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="tel" class="col-3 col-form-label">Telefono de Contacto</label>
+                            <div class="col-sm-9">
+                                <input type="tel" class="form-control" placeholder="3002139104" pattern="[0-9]{10}" required th:field="*{Celular}">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="" class="col-3 col-form-label">Ciudad</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" placeholder="Bogota" required th:field="*{Ciudad}">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="inputPassword" class="col-3 col-form-label">Dirección</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" placeholder="Crr 77 b# 63A 88 nor" required th:field="*{Direccion}">
+                            </div>
+                        </div>
+
+                        <div class="form-group row pt-1">
+                            <label for="ImputURL" enctype="multipart/form-data" class="col-3 col-form-label">Foto Personal/Empresa</label>
+                            <div class="col-md-5">
+                                <input type="file" id="foto" name="foto" accept=".jpg,.png" th:field="*{Foto}" target="_blank"><br><br>
+                            </div>
+                        </div>
+
+                        <div class="text-center mb-3">
+                            <input class="btn btn-danger" type="submit" value="Registrar">
+                        </div>
+                    </form>
+                </div>  
+            </div>
+        </div>
+
+
+
+        <div class="row justify-content-around pt-4 color1 text-white-50 ">
+            <div class="col-3 ">
+                <h4>Sobre Westars</h4>
+                <p>Trabaja con Nosotros</p>
+                <p>Nuestras Tiendas</p>
+                <p>Promociones</p>
+            </div>
+            <div class="col-3 color-white"> 
+                <h4>Políticas</h4>
+                <p>Términos y Condiciones</p>
+                <p>Cambios y Devoluciones</p>
+                <p>Tratamiento de Datos</p>
+                <p>Garantía</p>
+                <p>Envíos</p>
+                <p>TyC Día sin IVA</p>
+            </div>
+            <div class="col-3">
+                <h4>Atención al Cliente</h4>
+                <p>Formulario de Retracto</p>
+                <p>Formulario de PQR</p>
+                <p>Preguntas Frecuentes</p>
+                <p>Contáctanos</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!--SCRIP-->
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="css/bootstrap.bundle.min.js"></script>
+</body>
+</htmln>

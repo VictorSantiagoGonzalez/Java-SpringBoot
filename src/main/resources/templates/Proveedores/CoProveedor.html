@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" th:href="@{/bootstrap.css}">
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/dataTables/datatables.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <title>Proveedores</title>
+    </head> 
+    <body>
+
+        <header th:fragment="header">
+        <div class="contenedor-fluid">
+            <div class="row">
+                <div class="col">
+                    <nav class="navbar navbar-expand-md color1 navbar-dark">
+                        <a href="#" class="navbar-brand"></a>
+                        <img src="img/a.png"  >
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Menu">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse  justify-content-end" id="Menu">
+                            <ul class="navbar-nav">
+                                 <li class="nav-item"><a th:href="@{/}" class="nav-link">Home</a></li> 
+                                <li class="nav-item"><a th:href="@{/Catalogo}" class="nav-link">Catálogo</a></li> 
+                                <li class="nav-item"><a th:href="@{/Contactanos}" class="nav-link">Contáctanos</a></li> 
+                                <li class="nav-item"><a th:href="@{/Quienes}" class="nav-link">Quienes Somos</a></li> 
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+
+            </div>
+
+            <div>
+                <h1 class="text-center mb-5 mt-5 mb-3 fw-bolder">
+                    Proveedores
+                </h1>
+                
+            </div>
+                                <a href="Carga_Masiva" style="margin-left: 1043px"  data-target="#Mensaje" class="btn btn-outline-danger">Carga Masiva</a>
+                                <br> <br>
+
+
+            <div class="row text-center pr-5">
+                <div class="col-md-11 mr-5 ml-5 mb-5 pr-5">
+                    <table id="compras" class="table table-striped border border-danger rounded">
+                        <thead>
+                            <tr> 
+                                <th>ID</th>
+                                <th>Foto</th>
+                                <th>Nombre</th>
+                                <th>Correo Electrónico</th>
+                                <th>Telefono de Contacto</th>
+                                <th>Ciudad</th>
+                                <th>Dirección</th>   
+                                <th></th>                                     
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="tbl_proveedorItem : ${lstTbl_proveedor}">
+                                <td scope="row" th:text="${tbl_proveedorItem.idtbl_proveedor}"></td>
+                                <td><img scope="row" width="120" height="100" th:src="${tbl_proveedorItem.Foto}" target="_blank"></td> 
+                                <td scope="row" th:text="${tbl_proveedorItem.Nombre}"></td>
+                                <td scope="row" th:text="${tbl_proveedorItem.Correo}"></td>
+                                <td scope="row" th:text="${tbl_proveedorItem.Celular}"></td>
+                                <td scope="row" th:text="${tbl_proveedorItem.Ciudad}"></td>
+                                <td scope="row" th:text="${tbl_proveedorItem.Direccion}"></td>
+                              
+
+                             
+
+                                <td> <a th:href="@{/editarPro/}+${tbl_proveedorItem.idtbl_proveedor}" class="btn btn-outline-info">Editar<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                            <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                                            </svg></a>
+                                 <a    data-toggle="modal" data-target="#Proveedor" class="btn btn-outline-danger">Eliminar<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                            </svg></a>
+                                </td>
+                                
+                                
+                                 <!-- Modallllllll -->
+                                 <div class="modal fade" id="Proveedor">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <!-- Encabezado -->
+                                        <div class="modal-header color1 text-white text-center">
+                                            <h5>¿Esta Seguro?</h5>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+
+                                        <!-- BODY -->
+                                        <div class="modal-body text-center">
+                                            <form action="">
+                                                <label for="Imagen"><img src="img/afirmacion.png" width="100px" height="100px"></label>
+                                                <br>
+                                                <br>
+                                                <label for="Mensaje">¿Desea eliminar este proveedor definitivamente?</label>
+
+
+                                            </form>
+                                        </div>
+
+                                        <!-- FOOTER -->
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cerrar</button>
+                                             <a th:href="@{/eliminarPro/}+${tbl_proveedorItem.idtbl_proveedor}"  class="btn btn-outline-info" >Aceptar</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            </tr>
+                            
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+            
+            
+
+        <div class=" p row justify-content-around mt-5">
+            <div class="col">
+                <p class="jumbotron color1 text-white-50">Documentation and examples for Bootstrap’s powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.</p>
+            </div>
+
+        </div>
+ 
+
+
+<!--SCRIP-->
+ <script th:src="@{/js/jquery-3.5.1.slim.min.js}"></script>
+                <script th:src="@{/bootstrap.bundle.min.js}"></script>
+                <script th:src="@{/dataTables/datatables.min.js}"></script>
+                <script th:src="@{/dataTables/Buttons-1.7.0/js/buttons.bootstrap.min.js}"></script>
+                <script th:src="@{/dataTables/Buttons-1.7.0/js/dataTables.buttons.min.js}"></script>
+                <script th:src="@{/dataTables/JSZip-2.5.0/jszip.min.js}"></script>
+                <script th:src="@{/dataTables/pdfmake-0.1.36/pdfmake.min.js}"></script>
+                <script th:src="@{/dataTables/pdfmake-0.1.36/vfs_fonts.js}"></script>
+                <script th:src="@{/dataTables/Buttons-1.7.0/js/buttons.html5.js}"></script>
+                <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+
+<script type="text/javascript">
+    function btn0() {
+        swal({
+            title: "Estas Seguro?",
+            text: "Deseas eliminar este historial defenitivamente!?",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        swal("Historial Eliminado", {
+                            icon: "success",
+                        });
+                    } else {
+                        swal("Historial Guardado");
+                    }
+                });
+
+    }
+</script>
+<script type="text/javascript">
+    function btn1() {
+        swal("Guardado!", "Los datos se guardaron correctamente", "success");
+    }
+</script>
+<script>$('#compras').DataTable({
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'excel', 'pdf', 'print'
+        ]
+    });
+</script>
+</header>
+</body>
+</html>
